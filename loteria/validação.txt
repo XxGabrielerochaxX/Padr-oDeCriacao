@@ -1,0 +1,58 @@
+Marco
+
+wmc: quantidade de métodos por classe
+
+dit: quanto mais uma classe herda de outras por exemplo classe F herda da classe D e a classe D herda da classe A
+ou seja o dit da classe F é 2(F -> D ->A)
+
+( contar quantas heranças ate a principal)
+
+
+
+noc: (qtd de classes que herdam da classe analizada)
+ex: classes B,C,D herdam da classe A
+noc A = 3
+
+cbo: qtd de classes ligadas a classe sendo analisada exceto herança( so ligação comum)
+ex: classe G está ligada (associada) as classes A,J,H,I
+autoassociação se n tiver uma restrição de direção conta duas vzs
+ex: J<->J
+
+
+cs: soma dos atributos e métodos de uma classe(excessão se tiver herança: soma os os atributos e métodos da propria classe e da classe qu ela está herdando)
+soma da classe A = 4
+classe B herda da classe A
+soma classe B = 7 (3 da classe B e 4 da classe A) ( conta tudo atributo e metodo e se tiver hernça junta o valor conta ate a classe final )
+
+noo: só funciona com herança sobreescrever métodos de uma superclasse em uma subclasse (Procura um metodo igual da herança se passou pra outra)
+ex: métodos da classe D: d1 e a3(método da classe A)
+noo da classe D=1
+
+noa: só funciona com herança qt de coisas novas em uma subclasse ( tudo que nao ta repetido so se tiver herança)
+ex: classe D herda de classe A
+classe A :a1 a2 a3() a4()
+classe D: d1 a3() d1()
+noa class D:2 (porque a3() não é novidade, a classe A já tinha)
+
+si: dit e noc ja analisa
+
+
+
+
+
+
+
+
+USA MENOS 
+
+
+
+lcom: metodos alterados o minimo possível por outros métodos ou talvez só por ele mesmo
+só usada com código fonte se tiver só diagrama impossibilidade de usar
+lcom 1>lcom2
+
+rfc: qtd vezes q os métodos de uma classe são chamados por outra classe
+só usada com código fonte se tiver só diagrama impossibilidade de usar
+ex: metodo a1 da classe A é utilizado 5 vezes pela classe B
+rfc = 5
+
